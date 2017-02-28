@@ -21,7 +21,7 @@ class Room():
 #Rooms
 London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
 'Your starting point')
-Liege = Room('London, United Kingdom', None, 'Berlin', 'Switzerland', 'London', None, None,\
+Liege = Room('Liege, Belgium', None, 'Berlin', 'Switzerland', 'London', None, None,\
 'There is a waffle store near you.')
 Washington = Room('Washington DC', None, 'Ocean', None, 'Plato', None, None,\
 'Woodrow Wilson recently gave his inaugural speech, but the\
