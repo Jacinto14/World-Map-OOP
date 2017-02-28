@@ -18,7 +18,7 @@ class Room():
 #This function allows movement to a different node.
         global node 
         node = globals()[getattr(self,direction)]
-       
+#Rooms
 London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
 'Your starting point')
 Liege = Room('London, United Kingdom', None, 'Berlin', 'Switzerland', 'London', None, None,\
