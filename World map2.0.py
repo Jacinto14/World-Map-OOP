@@ -59,20 +59,20 @@ Fresno = Room('Fresno, California', None, 'Plato', None, None, None, None,\
 in the corner')
 Berlin = Room('Berlin, Germany', None, None, None, 'Liege', None, None,\
 'Capital of the German Empire "Hallo!"')
-'''
-London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
+
+Maze = Room('Start of Confusing Tundra', 'Maze3', 'Maze2', None, 'Maze', None, None,\
+'It\'s cold and you don\'t know where to go.')
+Maze2 = Room('Confusing Tundra: This looks familiar...', 'Maze5', 'Maze4', None, 'Maze', None, None,\
 'Your starting point')
-London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
-'Your starting point')
-London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
-'Your starting point')
-London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
-'Your starting point')
-London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
-'Your starting point')
-London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
-'Your starting point')
-'''
+Maze3 = Room('Confusing Tundra: This looks familiar...', None, None, 'Maze', None, None, None,\
+'It\'s cold and you don\'t know where to go.')
+Maze4 = Room('Confusing Tundra: This looks familiar...', None, 'Tokyo', None, 'Maze2', None, None,\
+'It\'s cold and you don\'t know where to go.')
+Maze5 = Room('Confusing Tundra: This looks familiar...', None, None, 'Maze2', None, None, None,\
+'It\'s cold and you don\'t know where to go.')
+Tokyo = Room('Tokyo, Japan', None, None, None, 'Maze4', None, None,\
+'Capital of the Japanese Empire.')
+
 
 
 #static variables
