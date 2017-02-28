@@ -2,6 +2,12 @@
 #World Map
 ####
 import sys
+class Item():
+    def gun(self, name, description, ammo):
+        self.name = name
+        self.description = description
+        self.ammo = ammo
+    
 class Room():
     def __init__(self, the_name, n, e, s, w, u, d, the_description):
         self.name = the_name
@@ -72,6 +78,9 @@ Maze5 = Room('Confusing Tundra: This looks familiar...', None, None, 'Maze2', No
 'It\'s cold and you don\'t know where to go.')
 Tokyo = Room('Tokyo, Japan', None, None, None, 'Maze4', None, None,\
 'Capital of the Japanese Empire.')
+
+#Items
+M1911 = Item('M1911', 'Very Common Pistol', 25)
 
 
 
