@@ -2,12 +2,21 @@
 #World Map
 ####
 import sys
+class NPC():
+    def Sold(self, name, weapon, ammo):
+        self.weapon = weapon
+        self.name = name
+        self.ammo = ammo
+
+        
 class Item():
-    def gun(self, name, description, ammo):
+    def gun(self, name, description, ammo, damage):
         self.name = name
         self.description = description
         self.ammo = ammo
-    
+        self.damage = 20
+    def shoot(self):
+        
 class Room():
     def __init__(self, the_name, n, e, s, w, u, d, the_description):
         self.name = the_name
