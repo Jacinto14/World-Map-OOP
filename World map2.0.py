@@ -9,14 +9,8 @@ class NPC():
         self.ammo = ammo
 
         
-class Item():
-    def gun(self, name, description, ammo, damage):
-        self.name = name
-        self.description = description
-        self.ammo = ammo
-        self.damage = 20
-    def shoot(self):
-        
+
+    
 class Room():
     def __init__(self, the_name, n, e, s, w, u, d, the_description):
         self.name = the_name
@@ -41,11 +35,11 @@ Liege = Room('Liege, Belgium', None, 'Berlin', 'Switzerland', 'London', None, No
 Washington = Room('Washington DC', None, 'Ocean', None, 'Plato', None, None,\
 'Woodrow Wilson recently gave his inaugural speech, but the\
 US hasn\'t entered the Great War yet')
-Paris = Room('Paris, France', 'London', None, 'Switzerland', 'Ocean', None, None,\
+Paris = Room('Paris, France', 'London', None, None, 'Ocean', None, None,\
 'You can see the eiffel tower')
 Ocean = Room('The Pacific Ocean', None, 'Paris', None, 'Washington', None, None,\
 '6,000 kilometers of blue water')
-Switzerland = Room('Switzerland', 'Paris', 'Sarajevo', 'Gallipoli', None, None, None,\
+Switzerland = Room('Switzerland', 'Liege', 'Sarajevo', 'Gallipoli', None, None, None,\
 'A completely neutral country, there is almost nothing to\
 do here.')
 Gallipoli = Room('Gallipoli, Italy', 'Switzerland', 'Constantinople', None, None, None, None,\
@@ -75,7 +69,7 @@ in the corner')
 Berlin = Room('Berlin, Germany', None, None, None, 'Liege', None, None,\
 'Capital of the German Empire "Hallo!"')
 
-Maze = Room('Start of Confusing Tundra', 'Maze3', 'Maze2', None, 'Maze', None, None,\
+Maze = Room('Start of Confusing Tundra', 'Maze3', 'Maze2', None, 'Moscow', None, None,\
 'It\'s cold and you don\'t know where to go.')
 Maze2 = Room('Confusing Tundra: This looks familiar...', 'Maze5', 'Maze4', None, 'Maze', None, None,\
 'Your starting point')
@@ -88,8 +82,14 @@ Maze5 = Room('Confusing Tundra: This looks familiar...', None, None, 'Maze2', No
 Tokyo = Room('Tokyo, Japan', None, None, None, 'Maze4', None, None,\
 'Capital of the Japanese Empire.')
 
-#Items
-M1911 = Item('M1911', 'Very Common Pistol', 25)
+class Item():
+    def gun(self, name, description, ammo, damage):
+        self.name = name
+        self.description = description
+        self.ammo = ammo
+        self.damage = 20
+        
+
 
 
 
