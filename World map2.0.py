@@ -3,14 +3,12 @@
 ####
 import sys
 class NPC():
-    def Sold(self, name, weapon, ammo):
+    def Sold(self, name, weapon, ammo, health):
         self.weapon = weapon
         self.name = name
         self.ammo = ammo
-
+        self.health = health
         
-
-    
 class Room():
     def __init__(self, the_name, n, e, s, w, u, d, the_description):
         self.name = the_name
@@ -27,6 +25,13 @@ class Room():
 #This function allows movement to a different node.
         global node 
         node = globals()[getattr(self,direction)]
+class Item():
+    def _gun_(self, the_name, the_description, ammo, damage):
+        self.name = the_name
+        self.description = the_description
+        self.ammo = ammo
+        self.damage = damage
+Pistol = NPC('M1911 ', 'Basic and common pistol', 25, 20)
 #Rooms
 London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
 'Your starting point')
@@ -82,12 +87,8 @@ Maze5 = Room('Confusing Tundra: This looks familiar...', None, None, 'Maze2', No
 Tokyo = Room('Tokyo, Japan', None, None, None, 'Maze4', None, None,\
 'Capital of the Japanese Empire.')
 
-class Item():
-    def gun(self, name, description, ammo, damage):
-        self.name = name
-        self.description = description
-        self.ammo = ammo
-        self.damage = 20
+
+        
         
 
 
