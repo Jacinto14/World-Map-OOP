@@ -2,13 +2,22 @@
 #World Map
 ####
 import sys
-class NPC():
-    def Sold(self, name, weapon, ammo, health):
-        self.weapon = weapon
-        self.name = name
-        self.ammo = ammo
-        self.health = health
+class Character(object):
+    def __init__(self, name, hp, mp, defense, attack):
+        self.attack = attack
+        self. name = name
+        self.health = hp
+        self.bag = []
         
+    def pick_up(self, item):
+        self.bag.append(item)
+        print "You put the %s in your bag." % item
+        
+    def attack(self, target):
+        target.take_damage(self.attack)
+        print "You attack %s for %d damage." % (target.name, self.attack)
+    def take_damage(self, damage):
+        self.health -= damage
 class Room():
     def __init__(self, the_name, n, e, s, w, u, d, the_description):
         self.name = the_name
@@ -25,13 +34,7 @@ class Room():
 #This function allows movement to a different node.
         global node 
         node = globals()[getattr(self,direction)]
-class Item():
-    def _gun_(self, the_name, the_description, ammo, damage):
-        self.name = the_name
-        self.description = the_description
-        self.ammo = ammo
-        self.damage = damage
-Pistol = NPC('M1911 ', 'Basic and common pistol', 25, 20)
+
 #Rooms
 London = Room('London, United Kingdom', None, 'Liege', 'Paris', 'Ocean', None, None,\
 'Your starting point')
